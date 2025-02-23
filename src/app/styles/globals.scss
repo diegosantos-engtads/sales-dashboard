@@ -1,11 +1,57 @@
-$primary-color: #0070f3;
-
+// Reset global
 * {
-  margin-trim: auto;
-  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+// Variáveis SCSS (usadas apenas dentro do SCSS)
+$primary-color: #0070f3;
+$secondary-color: #ff4081;
+$background-color: #f4f4f4;
+$text-color: #333;
+$font-family: 'Inter', sans-serif;
 
+// Variáveis CSS globais (usadas no HTML e acessíveis no Next.js)
+:root {
+  --background: #{$background-color}; // Usa a variável SCSS como valor
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --text-color: #{$text-color};
+  --font-inter: #{$font-family};
+}
+
+// Estilos globais
 body {
-  background-color: $primary-color;
+  font-family: var(--font-inter, sans-serif);
+  // background: var(--background);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  background: red;
+  min-height: 100svh;
+  width: 100svw;
+
+}
+
+// Classes utilitárias (opcional)
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
 }

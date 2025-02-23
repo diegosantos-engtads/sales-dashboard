@@ -1,20 +1,18 @@
+// app/about/page.tsx
 import { metadata } from '@/app/layout';
 import CustomHead from '@/app/components/Head';
 import './index.scss'
 
 export default function Home() {
-
-  metadata.title = "Titulo da Home page";
-  metadata.description = "Metadatadresciption da Home Page";
+  metadata.title = "Home";
+  metadata.description = "Home";
 
   return (
     <>
       <CustomHead />
-
-
-      <section>
-        <h1>textoddddddddddddddddd</h1>
-      </section>
+      <header>
+         <h2>dasdasdsad</h2>
+      </header>
     </>
   );
 }
