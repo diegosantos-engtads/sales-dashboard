@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-// Variáveis SCSS (usadas apenas dentro do SCSS)
+// Variáveis SCSS (usadas dentro do SCSS)
 $primary-color: #0070f3;
 $secondary-color: #ff4081;
 $background-color: #f4f4f4;
@@ -24,19 +24,20 @@ $font-family: 'Inter', sans-serif;
 // Estilos globais
 body {
   font-family: var(--font-inter, sans-serif);
-  // background: var(--background);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--background);
 }
+
+// Estilo da `main`
 main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  background: red;
-  min-height: 100svh;
-  width: 100svw;
-
+  background: rgb(23, 119, 154);
+  min-height: 100svh; // Usa `svh` para evitar cortes no mobile
+  width: 100%;
 }
 
 // Classes utilitárias (opcional)
